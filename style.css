@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: inherit;
+  min-width: 250px;
+  background: rgb(28, 62, 130);
+  background-attachment: fixed;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: 400px;
+  height: 700px;
+  padding: 20px 10px;
+  border-radius: 0.5rem;
+  background-color: rgb(98, 132, 130);
+  box-shadow: 2px 2px 5px 10px rgba(28, 37, 37, 0.3);
+}
+
+.container__window {
+  padding: 0 0.8rem;
+  height: 25%;
+  width: 100%;
+  border: solid 2px rgb(45, 59, 59);
+  background: rgba(162, 206, 206, 0.558) url(https://grainy-gradients.vercel.app/noise.svg);
+  box-shadow: inset 1px 1px 10px 0 rgb(28, 37, 37);
+  border-radius: 0.5rem;
+}
+
+.container__window__input,
+.container__window__result {
+  height: 50%;
+  color: rgb(45, 59, 59);
+  display: flex;
+  align-items: center;
+}
+
+
+.container__window__result {
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.container__keys {
+  margin-top: 6%;
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 5px;
+}
+
+.container__keys__numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto-fit;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.container__keys__operations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+
+
+.key {
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  color: rgb(45, 59, 59);
+  box-shadow: 2px 2px 0 0 rgb(28, 37, 37);
+  cursor: pointer;
+}
+
+.key:active {
+  box-shadow: inset 2px 2px 0 0.5px rgb(28, 37, 37);
+}
+
+.number {
+  background-color: azure;
+  display: grid;
+  place-content: center;
+}
+
+#delete_all,
+#delete_one {
+  background-color: rgb(199, 91, 91);
+  color: azure;
+}
+
+#equals {
+  background-color: rgb(70, 131, 230);
+  color: azure;
+}
+
+
+.operation {
+  background-color: rgb(231, 231, 121);
+  display: grid;
+  place-content: center;
+}
+
+.sum {
+  grid-row: span 2;
+}
